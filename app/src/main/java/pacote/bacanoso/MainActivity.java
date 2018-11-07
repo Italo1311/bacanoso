@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
 
     private EditText mEditAlcool;
@@ -29,34 +29,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnCalculate = findViewById(R.id.btnCalc);
         //mTextResult = findViewById(R.id.textResult);
 
+        mBtnCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mMainTitle.setText(mEditAlcool.getText().toString());
+            }
+        });
 
 
-        mBtnCalculate.setOnClickListener(this);
-
-
-    }
 
 
 
-    @Override
-    public void onClick(View view) {
-        int id = view.getId();
-
-
-        if(id == R.id.btnCalc)
-            calculate(Double.valueOf(mEditAlcool.getText().toString()),
-                    Double.valueOf(mEditGasolina.getText().toString()));
-
-
-    }
-
-
-    private void calculate(double alcoolValue, double gasolinaValue) {
-        if(alcoolValue * 0.7 >= gasolinaValue) {
-            mTextResult.setText("Álcool");
-        } else {
-            mTextResult.setText("Gasolina");
-        }
 
     }
 
