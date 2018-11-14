@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FlexCal</string>
     <string name="main_title">Álcool ou Gasolina</string>
-    <string name="text_gasolina">Litro Gasolina</string>
-    <string name="text_alcool">Litro Álcool</string>
+    <string name="text_gasolina">Litro gasolina</string>
+    <string name="text_alcool">Litro álcool</string>
     <string name="btn_calcular">Calcular</string>
 </resources>
